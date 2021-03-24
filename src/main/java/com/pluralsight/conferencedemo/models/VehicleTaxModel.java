@@ -33,6 +33,8 @@ public class VehicleTaxModel {
         this.specialImportLevy = specialImportLevy;
     }
 
+    public VehicleTaxModel(){}
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name="id")

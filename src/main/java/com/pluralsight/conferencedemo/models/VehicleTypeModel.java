@@ -15,6 +15,7 @@ public class VehicleTypeModel {
         ShortName = shortName;
         this.description = description;
     }
+    public VehicleTypeModel(){}
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
