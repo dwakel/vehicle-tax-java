@@ -32,7 +32,7 @@ public class VehicleCategoryModel {
         this.shortName = shortName;
         this.description = description;
     }
-
+    public  VehicleCategoryModel(){}
     public Long getId() {
         return id;
     }

@@ -60,7 +60,8 @@ public class VehicleController {
     @RequestMapping("Category/{id}")
     @ResponseStatus(HttpStatus.OK)
     public VehicleCategoryModel getCategory(@PathVariable Long id){
-        return vehicleCategoryRepository.getOne(id);
+        VehicleCategoryModel model = vehicleCategoryRepository.findById(id).get();
+        return model;
     }
 
     @GetMapping
