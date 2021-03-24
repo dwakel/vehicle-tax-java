@@ -4,6 +4,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 
 import javax.persistence.*;
 
+@Entity(name = "vehicle_type")
 public class VehicleTypeModel {
     public VehicleTypeModel(@JsonProperty("id") Long id,
                             @JsonProperty("vehicleCategoryId") Long vehicleCategoryId,
@@ -29,8 +30,8 @@ public class VehicleTypeModel {
     @Column(name="description")
     private String description;
 
-    @ManyToOne
-    private VehicleCategoryModel category;
+//    @ManyToOne
+//    private VehicleCategoryModel category;
 
     public Long getId() {
         return id;
@@ -64,11 +65,11 @@ public class VehicleTypeModel {
         this.description = description;
     }
 
-    public VehicleCategoryModel getCategory() {
-        return category;
-    }
-
-    public void setCategory(VehicleCategoryModel category) {
-        this.category = category;
-    }
+//    public VehicleCategoryModel getCategory() {
+//        return category;
+//    }
+//
+//    public void setCategory(VehicleCategoryModel category) {
+//        this.category = category;
+//    }
 }

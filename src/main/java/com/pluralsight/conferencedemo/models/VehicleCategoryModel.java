@@ -14,24 +14,23 @@ public class VehicleCategoryModel {
     @Column(name="short_name")
     private String shortName;
 
-    @Column(name="short_name")
+    @Column(name="description")
     private String description;
 
-    @OneToMany
-    @JoinTable(
-            name = "vehicle_category",
-            joinColumns = @JoinColumn(name = "category_id", referencedColumnName = "id"),
-            inverseJoinColumns = @JoinColumn(name = "type_id", referencedColumnName = "id")
-    )
-    private List<VehicleTypeModel> vehicleTypes;
+//    @OneToMany
+//    @JoinTable(
+//            name = "vehicle_category",
+//            joinColumns = @JoinColumn(name = "category_id", referencedColumnName = "id"),
+//            inverseJoinColumns = @JoinColumn(name = "type_id", referencedColumnName = "id")
+//    )
+//    private List<VehicleTypeModel> vehicleTypes;
 
     public VehicleCategoryModel(@JsonProperty("id") Long id,
                                 @JsonProperty("shortName") String shortName,
-                                @JsonProperty("description") String description, List<VehicleTypeModel> vehicleTypes){
+                                @JsonProperty("description") String description){//, List<VehicleTypeModel> vehicleTypes){
         this.id = id;
         this.shortName = shortName;
         this.description = description;
-        this.vehicleTypes = vehicleTypes;
     }
 
     public Long getId() {
@@ -58,11 +57,11 @@ public class VehicleCategoryModel {
         this.description = description;
     }
 
-    public List<VehicleTypeModel> getVehicleTypes() {
-        return vehicleTypes;
-    }
-
-    public void setVehicleTypes(List<VehicleTypeModel> vehicleTypes) {
-        this.vehicleTypes = vehicleTypes;
-    }
+//    public List<VehicleTypeModel> getVehicleTypes() {
+//        return vehicleTypes;
+//    }
+//
+//    public void setVehicleTypes(List<VehicleTypeModel> vehicleTypes) {
+//        this.vehicleTypes = vehicleTypes;
+//    }
 }

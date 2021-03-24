@@ -2,11 +2,9 @@ package com.pluralsight.conferencedemo.models;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
-import javax.persistence.Column;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 
+@Entity(name = "vehicle_tax")
 public class VehicleTaxModel {
 
     public VehicleTaxModel(@JsonProperty("id") Long id,
